@@ -7,6 +7,8 @@ module.exports = {
 
   readQuestions(req, res){
 
+    console.log('read question');
+
     Question.find({}).populate('UserId').exec(function(err, user) {
       if (err) {
         console.log(err);
@@ -22,12 +24,12 @@ module.exports = {
     const UserId = jwt.decode(token.slice(1, token.length-1)).id
 
     const newQuestion = {
-      title: req.body.Question.title,
-      description: req.body.Question.detail,
+      title: req.body.question.title,
+      description: req.body.question.detail,
       UserId
     }
 
-    Questions.create(newQuestion, function(err, success) {
+    Question.create(newQuestion, function(err, success) {
       if (err) {
         res.status(404).json('bad request')
       } else {

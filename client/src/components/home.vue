@@ -89,7 +89,7 @@ export default {
 
       axios({
         method: 'post',
-        url: 'http://localhost:3000/question',
+        url: 'http://localhost:3000/question/add/',
         data: newQuestion
       })
       .then(() => {

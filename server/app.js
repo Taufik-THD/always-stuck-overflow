@@ -6,7 +6,7 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/stuckoverflow', (req, res) => {
+mongoose.connect('mongodb://always-stuckoverflow:11o22o12@ds133360.mlab.com:33360/overflow', (req, res) => {
   console.log('database connected!');
 })
 

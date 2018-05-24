@@ -4,7 +4,7 @@ const { readQuestions, addNewQuestion, OpenQuestion, getDetail, upvote, downvote
 
 router.post('/', readQuestions)
 
-router.post('/', addNewQuestion)
+router.post('/add', addNewQuestion)
 
 router.get('/:id', OpenQuestion)
 
