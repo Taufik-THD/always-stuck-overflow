@@ -27,8 +27,6 @@ module.exports = {
 
               } else {
 
-                console.log('adanih login');
-
                 const jwtToken = jwt.sign({ email: req.body.email, id: user._id }, 'MYSUPERSECRET')
                 res.status(200).json({ jwtToken })
 
